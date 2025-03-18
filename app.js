@@ -4,7 +4,7 @@ import { PORT } from './config/env.js';
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('<h1>Welcome to the subscription API<h1/>')
+    res.send('<h1>Welcome to the subscription API<h1/>');
 })
 
 app.listen(PORT, () => {

@@ -8,6 +8,7 @@ import subscriptionRouter from './routes/subscription.routes.js';
 import connectToDB from './database/db.js';
 import errorMiddleware from './middlewares/error.middleware.js';
 import limiter from './middlewares/rate.limiter.js';
+import workflowRouter from './routes/workflow.routes.js';
 
 const app = express();
 
@@ -19,6 +20,8 @@ app.use(limiter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/subscriptions', subscriptionRouter);
+app.use('/api/v1/workflows', workflowRouter);
+
 
 app.use(errorMiddleware)
 
